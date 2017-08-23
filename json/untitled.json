@@ -1,0 +1,26 @@
+{
+  "kind": "discovery#restDescription",
+  "etag": "c977716d7e5418013924140fa11f8e0fdabbba33",
+  "discoveryVersion": "v1",
+  "id": "test:v1",
+  "name": "test",
+  "version": "v1",
+  "revision": "0",
+  "protocol": "rest",
+  "baseUrl": "http://localhost:8080/test/v1/",
+  "basePath": "/test/v1/",
+  "rootUrl": "http://localhost:8080/",
+  "servicePath": "test/v1/",
+  "parameters": {},
+  "schemas": {},
+  "methods": {
+    "hello": {
+      "id": "Test.hello",
+      "path": "hello",
+      "httpMethod": "GET",
+      "parameters": {},
+      "parameterOrder": []
+    }
+  },
+  "resources": {}
+}
