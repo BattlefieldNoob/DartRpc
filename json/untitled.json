@@ -1,6 +1,6 @@
 {
   "kind": "discovery#restDescription",
-  "etag": "c977716d7e5418013924140fa11f8e0fdabbba33",
+  "etag": "cf805108b29632778a239177a2029d0fe3964424",
   "discoveryVersion": "v1",
   "id": "test:v1",
   "name": "test",
@@ -12,7 +12,29 @@
   "rootUrl": "http://localhost:8080/",
   "servicePath": "test/v1/",
   "parameters": {},
-  "schemas": {},
+  "schemas": {
+    "HelloWorldResponse": {
+      "id": "HelloWorldResponse",
+      "type": "object",
+      "properties": {
+        "hello": {
+          "type": "string"
+        },
+        "world": {
+          "type": "string"
+        }
+      }
+    },
+    "HelloWorldRequest": {
+      "id": "HelloWorldRequest",
+      "type": "object",
+      "properties": {
+        "greetings": {
+          "type": "string"
+        }
+      }
+    }
+  },
   "methods": {
     "hello": {
       "id": "Test.hello",
@@ -20,6 +42,29 @@
       "httpMethod": "GET",
       "parameters": {},
       "parameterOrder": []
+    },
+    "helloClass": {
+      "id": "Test.helloClass",
+      "path": "helloClass",
+      "httpMethod": "GET",
+      "parameters": {},
+      "parameterOrder": [],
+      "response": {
+        "$ref": "HelloWorldResponse"
+      }
+    },
+    "helloClassWithData": {
+      "id": "Test.helloClassWithData",
+      "path": "helloClassWithData",
+      "httpMethod": "POST",
+      "parameters": {},
+      "parameterOrder": [],
+      "request": {
+        "$ref": "HelloWorldRequest"
+      },
+      "response": {
+        "$ref": "HelloWorldResponse"
+      }
     }
   },
   "resources": {}
